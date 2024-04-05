@@ -1,0 +1,121 @@
+.componentContainer {    
+    width: 90%;
+    padding-left: 90px;
+    padding-top: 30px;
+}
+
+.componentContainer > h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.componentContainer > h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.componentContainer > p {
+    font-size: 14px;
+    color: #b8b8b8;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.componentContainer > table {
+    text-align: center;
+}
+
+.deleteButton{
+    width: 65px;
+    height: 30px;
+    line-height: 15px;
+    font-size: 15px;
+    align-items: center;
+}
+
+.addTeamContainer > form{
+    display: flex;
+    width: 550px;
+}
+
+.addTeamContainer{
+    height: 80px;
+}
+
+.tempClass > button {
+    height: 40px;
+}
+
+.tempClass{
+    display: flex;
+}
+
+.teamsContainer{
+    display: flex;
+    padding-left: 45px;
+    align-items: center;
+}
+
+.temp {
+    margin-left: 120px;
+}
+
+.temp > select{
+    width: 200px;
+    margin-right: 20px;
+}
+
+.teamsContainer > button {
+    height: 35px;
+    margin-top: 25px;
+    width: 70px;
+}
+
+.teamsContainer-temp{
+    width: 250px;
+}
+
+.teamsContainer-temp:first-child{
+    margin-left: 30px;
+}
+
+.teamsContainer-temp:not(:first-child){
+    margin-left: 30px; 
+}
+
+.addMatchButton{
+    margin-left: 500px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.deleteButton{
+    margin-left: -15px;
+}
+
+.editButton{
+    width: 65px;
+    height: 30px;
+    line-height: 15px;
+    font-size: 15px;
+    align-items: center;
+}
+
+.componentContainer:first-child{
+    margin-bottom: 40px;
+}
+
+hr{
+    color:rgb(77, 77, 77);
+}
+
+.upperDeleteButton{
+    height: 30px;
+    line-height: 15px;
+    font-size: 15px;
+    align-items: center;
+}

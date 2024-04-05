@@ -1,0 +1,70 @@
+.componentContainer {    
+    width: 95%;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.componentContainer > h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.componentContainer > table {
+    text-align: center;
+}
+
+.componentContainer > h3{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.componentContainer > p {
+    font-size: 14px;
+    color: #b8b8b8;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.editButton{
+    width: 60px;
+    height: 30px;
+    line-height: 13px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.editPlayerStatsFormContainer > input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+
+}
+/* Firefox */
+.editPlayerStatsFormContainer > input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.editPlayerStatsFormContainer{
+    margin-top: 30px;
+    width: 400px;
+    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 170px;
+    border: 1px solid white;
+}
+
+.field{
+    margin-bottom: 10px;
+}
+
+.field > input {
+    margin-bottom: 20px;
+}
+
+.editPlayerStatsFormContainer > button {
+    display: block;
+    float: right;
+}

@@ -1,0 +1,41 @@
+
+.slider{
+    
+    position: relative;
+    
+    
+}
+
+/*
+.slider .owl-item.active.center .slider-card{
+    transform: scale(1.15);
+    opacity: 1;
+   background: #f46b45;  /* fallback for old browsers 
+    background: -webkit-linear-gradient(to right, #eea849, #f46b45);  
+    background: linear-gradient(to right, #eea849, #f46b45); 
+    color:#fff;
+
+}
+*/
+
+.slider-card{
+    display: inline-block;
+    margin: 25px 28px 0px 40px;
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 15px 45px -20px rgb(206, 191, 191,0.49);
+    
+    
+}
+
+.slider-card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px 5px 0px 0px; 
+    box-shadow: 0 10px 20px ;
+    background-color: #f46b45;
+   
+   
+    
+}

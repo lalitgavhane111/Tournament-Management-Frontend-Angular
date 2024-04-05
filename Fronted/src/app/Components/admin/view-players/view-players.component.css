@@ -1,0 +1,52 @@
+.componentContainer {    
+    width: 95%;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.componentContainer > p {
+    font-size: 14px;
+    color: #b8b8b8;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.componentContainer > h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.componentContainer > table {
+    text-align: center;
+}
+
+table > tbody > tr > td > a{
+    text-decoration: none; 
+    color: white;
+}
+
+table > tbody > tr > td > a:hover{
+    color: rgb(220, 191, 4);
+}
+
+table{
+    font-size: 14px;
+}
+
+.editButton{
+    width: 50px;
+    height: 25px;
+    line-height: 13px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.deleteButton{
+    width: 60px;
+    height: 25px;
+    line-height: 13px;
+    font-size: 14px;
+    align-items: center;
+    margin-left: -20px;
+}

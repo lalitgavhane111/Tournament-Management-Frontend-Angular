@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Match Details</title>
+    <style>
+      *{
+
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+font-family: sans-serif;
+color: black;
+}
+.table-container{
+  border-radius: 30% ;
+padding: 0 10%;
+margin-top: 30px;
+padding-top : 10px;
+
+}
+.heading{
+font-size: 30px;
+text-align: center;
+margin-bottom: 15px;
+}
+
+table {
+  border: 1px solid black;
+}
+.table{
+width: 1005;
+border-collapse: collapse;
+text-align: center;
+}
+.table thead{
+background-color: #ee2828;
+
+}
+.table thead tr th{
+font-size: 14px;
+font-weight: medium;
+letter-spacing: 0.35px;
+opacity: 1;
+padding: 12px;
+vertical-align: top;
+border:1px solid #524f4f85;
+}
+
+.table tbody tr td{
+font-size: 14px;
+letter-spacing: 0.35px;
+font-weight: normal;
+padding: 8px;
+text-align: center;
+background-color: rgb(252, 246, 237);
+border:1px solid #524f4f85;
+
+}
+.table .text-open{
+font-size: 14px;
+font-weight: bold;
+letter-spacing: 0.35px;
+color: #ff1046;
+}
+
+table > tbody > tr > td > a:hover{
+  color: rgb(230, 149, 0);
+}
+
+    </style>
+  </head>
+  <body>
+
+    <header class="header">
+      <h1 class="logo" style="color: #fff; margin-left: -410px; margin-top: 5px;padding-left: 35%; ">The Soccer Cup</h1>
+        <ul class="main-nav">
+            <li><a [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a></li>
+            <li><a [routerLink]="['/send-request']" routerLinkActive="router-link-active" >Team Request</a></li>
+            <li><a [routerLink]="['/aboutus']" routerLinkActive="router-link-active" >About</a></li>
+            <li><a [routerLink]="['/login']" routerLinkActive="router-link-active" (click)="logout()">Log Out</a></li>
+        </ul>
+    </header> 
+  
+    <div class="table-container">
+      <h1 class="heading" style="text-transform: uppercase;">List of all tournaments</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tournament Name</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Winner Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tournament of tournaments, let i=index">
+            <td>{{i+1}}</td>
+            <td><a routerLink="/tournaments/{{tournament.id}}/matches">{{tournament.name}}</a></td>
+            <td>{{(tournament.startDate).substring(0,10)}}</td>
+            <td>{{(tournament.endDate).substring(0,10)}}</td>
+            <td>{{tournament.winnerTeam}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+
+</html>
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+<!-- <table class="table center table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Match Id</th>
+        <th scope="col">Tournament Name</th>
+        <th scope="col">Home Team</th>
+        <th scope="col">Away Team</th>
+        <th scope="col">Winner Team</th>
+      </tr>
+    </thead>
+    <tbody  *ngFor="let item of matches">
+      <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.tournamentName}}</td>
+        <td>{{item.homeTeamName}}</td>
+        <td>{{item.awayTeamName}}</td>
+        <td>{{item.matchWinner}}</td>
+      </tr>
+    </tbody>
+  </table>
+   -->

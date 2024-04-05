@@ -1,0 +1,24 @@
+<div class="componentContainer">
+  <h1>{{teamData.name}}</h1>
+  <p>Below is the list of players, hit delete if you want to remove player from the team</p>
+  <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Player Name</th>
+          <th scope="col">Player Rating</th>
+          <th scope="col">Player Role</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let player of teamData.players, let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{player.name}}</td>
+          <td>{{player.playerRating}}</td>
+          <td>{{player.playerRole}}</td>
+          <td><button type="button" class="btn btn-warning deleteButton" (click)="removePlayerFromTeam(player)">Delete</button></td>
+        </tr> 
+      </tbody>
+    </table>
+</div>

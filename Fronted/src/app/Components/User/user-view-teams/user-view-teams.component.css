@@ -1,0 +1,22 @@
+.tempContainer {
+    padding: 10px 50px 0px 50px;
+}
+
+.flexContainer{
+    background-color: blue;
+    padding: 20px 50px 20px 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 10px 0px 0px 10px;
+}
+.card-body > h5{
+    text-align: center;
+}
+
+.card-body > a{
+    margin-left: 25%;
+}

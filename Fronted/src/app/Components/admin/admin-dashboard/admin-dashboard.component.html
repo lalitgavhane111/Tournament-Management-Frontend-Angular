@@ -1,0 +1,25 @@
+<div class="main-container">
+   <div class="left-container">
+        <span><img src="../assets/logo.png" alt="Image"><h1>Tourney App</h1></span>
+        <img class="profileImg" src="../assets/admin.png" alt="Image">
+        <h1>Admin</h1>
+        <div class="optionsList">
+            <ul class="list group">
+                <h1>Player</h1>
+                <li><a routerLink="view-players">View players</a></li>
+                <li><a routerLink="add-player">Create new player</a></li>
+                <li><a routerLink="team-requests">Manage requests</a></li>
+                <h1>Team</h1>
+                <li><a routerLink="view-teams"><i  style="color: #1c4282;"></i>View teams</a></li>
+                <li><a routerLink="add-team">Create new team</a></li>
+                <h1>Tournament</h1>
+                <li><a routerLink="view-tournaments">View tournaments</a></li>
+                <li><a routerLink="create-tournament">Create tournament</a></li>
+                <li><button class="btn btn-warning" style="width: 100%; height: 100%;" (click)="adminlogout()">Log Out</button></li>
+            </ul>
+        </div>
+   </div>
+   <div class="right-container">
+        <router-outlet></router-outlet>
+   </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="componentContainer">
+  <h1>Edit tournament</h1>
+  <p>Enter the details below and then proceed</p>
+  <div class="tempContainer">
+  <form [formGroup]="editTournament" (ngSubmit)="submit()">
+      <div class="form-group field">
+        <label for="inputName">Tournament Name</label>
+        <input type="text" class="form-control" id="inputName" placeholder="Name" formControlName="name" name="name">
+      </div>
+
+      <div class="dateContainer">
+          <div class="form-group field">
+              <label for="inputStartDate">Start Date</label>
+              <input type="date" class="form-control" id="inputStartDate" placeholder="MM/DD/YYYY" style="text-transform: uppercase; width: 190px;" formControlName="startDate" name="startDate">
+            </div>
+          <div class="form-group field">
+              <label for="inputEndDate">End Date</label>
+              <input type="date" class="form-control" id="inputEndDate" placeholder="MM/DD/YYYY" style="text-transform: uppercase; width: 190px;" formControlName="endDate" name="endDate">
+
+            </div>
+      </div>
+
+      <div class="form-group field">
+        <label for="inputWinnerTeam">Winner Team</label>
+        <!-- <input type="text" class="form-control" formControlName="winnerTeam" id="inputWinnerTeam" placeholder="WinnerTeam Name" name="winnerTeam"> -->
+        <!-- <select class="form-select" aria-label="Select a team" formControlName="winnerTeam">
+          <option selected value=null>Not Declared</option>
+          <option value={{team.id}}>{{team.name}}</option>
+        </select> -->
+        <select formControlName="winnerTeam" class="form-select" aria-label="Select a team" name="teamId">
+          <option value="Not Declared" selected>Not Declared</option>
+          <option *ngFor="let team of thisTournamentTeams" value={{team.team.name}}>{{team.team.name}}</option>
+      <!-- <option value="2">Two</option>
+      <option value="3">Three</option> -->
+      </select>
+      </div>
+      
+      <button type="button" class="btn btn-warning" id="closeBtn" routerLink="/admin-dashboard/view-tournaments">Close</button>
+      <button id="createBtn" type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+  </div>
+</div>

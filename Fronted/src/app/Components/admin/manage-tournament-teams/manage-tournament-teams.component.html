@@ -1,0 +1,86 @@
+<div class="componentContainer">
+    <h1>{{tournamentDetailData.name}}</h1>
+    <h3>Add Team</h3>
+    <p>Add participating teams to the tournament</p>
+    <div class="addTeamContainer">
+        <form>
+            <div class="teamsContainer">
+            <div class="temp">
+                <label for="inputTeam">Select Team</label>
+                <select [(ngModel)]="addForm.teamId" class="form-select" aria-label="Select a team" name="teamId">
+                    <option value="" disabled selected>Select a team</option>
+                    <option *ngFor="let team of allTeams" value={{team.id}}>{{team.name}}</option>
+                <!-- <option value="2">Two</option>
+                <option value="3">Three</option> -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="addTeamToTournament()">Add</button> 
+          </div>
+        </form>
+    </div>
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let team of tournamentDetailData.tournamentDetails, let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{team.team.name}}</td>
+            <td><button type="button" class="btn btn-warning upperDeleteButton" (click)="deleteTeam(team.team.id, team.id)">Delete</button></td>
+          </tr> 
+        </tbody>
+      </table>
+</div>
+
+<hr>
+
+<div class="componentContainer">
+  <h3>Matches</h3>
+  <p>Add matches in the tournament</p>
+  <form>
+    <div class="teamsContainer">
+    <div class="teamsContainer-temp">
+      <label for="inputHomeTeam">Select Home Team</label>
+      <select [(ngModel)]="matchForm.homeTeamId" class="form-select" aria-label="Select a team" name="inputHomeTeam">
+        <option value="" disabled selected>Select a team</option>
+        <option *ngFor="let team of tournamentDetailData.tournamentDetails" value={{team.team.id}}>{{team.team.name}}</option>
+      </select>
+    </div>
+    <div class="teamsContainer-temp">
+      <label for="inputTeam">Select Away Team</label>
+      <select [(ngModel)]="matchForm.awayTeamId" class="form-select" aria-label="Select a team" name="teamId">
+        <option value="" disabled selected>Select a team</option>
+        <option *ngFor="let team of tournamentDetailData.tournamentDetails" value={{team.team.id}}>{{team.team.name}}</option>
+      </select>
+    </div>
+  </div>
+
+    <button type="submit" class="btn btn-primary addMatchButton" (click)="addMatchToTournament()">Add match</button>
+  </form>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Home Team</th>
+        <th scope="col">Away Team</th>
+        <th scope="col">Winner Team</th>
+        <th scope="col" colspan="2">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let team of filteredMatches, let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{team.homeTeam.name}}</td>
+        <td>{{team.awayTeam.name}}</td>
+        <td>{{team.matchWinner}}</td>
+        <td><button type="button" class="btn btn-primary editButton" routerLink="/admin-dashboard/view-tournaments/{{tournamentDetailData.id}}/manage/{{team.id}}/edit" (click)="editMatch(team.id)">Edit</button></td>
+        <td><button type="button" class="btn btn-warning deleteButton" (click)="deleteMatch(team.id)">Delete</button></td>
+      </tr> 
+    </tbody>
+  </table>
+  
+</div>

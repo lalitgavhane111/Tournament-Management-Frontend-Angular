@@ -1,0 +1,51 @@
+<div class="componentContainer">
+  <h1>Add new player</h1>
+  <p>Enter the details below and then proceed</p>
+  <div class="tempContainer">
+    <form #createPlayer="ngForm" (ngSubmit)="getData()">
+        <div class="form-group tempp">
+          <label for="inputName">Name</label>
+          <input [(ngModel)]="addForm.name" type="text" class="form-control" #inputName="ngModel" id="inputName" placeholder="Enter name" #name name="name">
+          <small>{{nameErrorMessage}}</small>
+        </div>
+
+        <div class="form-group tempp">
+          <label for="inputDate">Date of Birth</label>
+          <input [(ngModel)]="addForm.dob" type="date" class="form-control" id="inputDate" style="text-transform: uppercase;" placeholder="Date of Birth" #name name="dob" max={{currentDate}}>
+          <small>{{dateErrorMessage}}</small>
+        </div>
+
+        <div class="form-group tempp">
+          <label for="inputTeam">Team</label>
+          <select [(ngModel)]="addForm.teamId" ngModel class="form-select" aria-label="Select a team" id="inputTeam" #name name="teamId">
+            <option selected value=null>None</option>
+            <option *ngFor="let team of teams" value={{team.id}}>{{team.name}}</option>
+            <!-- <option value="2">Two</option>
+            <option value="3">Three</option> -->
+          </select>
+          <small>{{teamErrorMessage}}</small>
+        </div>
+        
+        <div class="flex-container tempp">
+          <div class="form-group field">
+            <label for="inputRating">Player Rating</label>
+            <input [(ngModel)]="addForm.playerRating" type="number" class="form-control" id="inputRating" placeholder="Rating" min="0" max="10" step="0.1" onkeydown="return false" style="color:transparent; text-shadow: 0 0 0 #000000;" #name name="playerRating">
+            <small>{{ratingErrorMessage}}</small>
+          </div>
+
+          <div class="form-group field">
+            <label for="playerRole">Player Role</label>
+            <select id="playerRole" [(ngModel)]="addForm.playerRole" class="form-select" aria-label="Select role" #name name="playerRole">
+              <option selected value="Attacker">Attacker</option>
+              <option value="Defender">Defender</option>
+              <option value="Goal Keeper">Goal Keeper</option>
+            </select>
+            <small>{{roleErrorMessage}}</small>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-warning" id="closeBtn" routerLink="/admin-dashboard/view-players">Close</button>
+        <button type="submit" id="createBtn" class="btn btn-primary">Create Player</button>
+      </form>
+  </div>
+</div>

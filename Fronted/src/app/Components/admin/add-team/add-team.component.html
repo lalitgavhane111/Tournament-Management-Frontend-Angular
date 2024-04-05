@@ -1,0 +1,40 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Success</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Team added successfully
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="componentContainer">
+  <h1>Create new team</h1>
+  <p>Enter the details below and then proceed</p>
+  <form #createTeam="ngForm" (ngSubmit)="getData(createTeam.value)">
+  <div class="tempContainer">
+      <div class="form-group">        
+          <label for="inputName">Team Name</label>
+          <input ngModel type="text" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Enter name" #name name="name">
+          <small>{{nameErrorMessage}}</small>
+          <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+      </div>    
+      <div class="form-group">
+          <label for="inputRating">Team Rating</label>
+          <input ngModel type="number" class="form-control" id="inputRating" placeholder="Rating" min="0" max="10" step="0.1" onkeydown="return false" style="color:transparent; text-shadow: 0 0 0 #000000;" #name name="teamRating">
+          <small>{{ratingErrorMessage}}</small>
+      </div>    
+      <button type="button" class="btn btn-warning" id="closeBtn" routerLink="/admin-dashboard/view-teams">Close</button>
+      <button id="createBtn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Create Team</button>
+  </div>
+</form>
+</div>

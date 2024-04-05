@@ -1,0 +1,190 @@
+/* * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 36px;
+	margin: 0;
+}
+
+nav {
+	margin-top: 10px;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+li {
+	margin-right: 20px;
+}
+
+li:last-child {
+	margin-right: 0;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.active {
+	font-weight: bold;
+} */
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.about-us {
+	font-family: "Montserrat", sans-serif;
+	background-color: #f2f2f2;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+h2 {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+
+
+
+.tempContainer{
+    margin: 10px 100px 10px 100px;
+}
+
+.temptable{
+    text-align: center;
+    width: 600px;
+    margin: 10px 200px 0px 200px;
+}
+
+table > tr {
+    align-items: center;
+}
+
+h1{
+    align-items: center;
+    
+}
+p{
+   
+}
+
+
+
+
+* {
+	box-sizing: border-box;
+  }
+  body {
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+  }
+  ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
+  
+  h2, h3, a {
+	color: #fff;
+  }
+  
+  a {
+	text-decoration: none;
+  }
+  
+  .logo {
+	margin: 0;
+	margin-left: 30px;
+	font-size: 1.45em;
+  }
+  
+  .main-nav {
+	margin-top: 3px;
+	margin-right: 45px;
+  }
+
+
+  .logo a,
+  .main-nav a {
+	padding: 5px 12px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+  }
+  
+  .main-nav a {
+	color: #fff;
+	font-size: 0.99em;
+  }
+  
+  .main-nav a:hover {
+	color: #fff;
+  }
+  
+  .header {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	/* border: 1px solid #fff; */
+	background-color: black;
+	/* -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75); */
+	/* -webkit-border-radius: 5px;
+	-moz-border-radius: 5px; */
+	/* border-radius: 5px; */
+  }
+  
+  /* ================================= 
+	Media Queries
+  ==================================== */
+  
+  @media (min-width: 769px) {
+	.header,
+	.main-nav {
+	  display: flex;
+	}
+	
+  
+  
+  @media (min-width: 1025px) {
+	.header {
+	  flex-direction: row;
+	  justify-content: space-between;
+	}
+  }
+  
+  }
+

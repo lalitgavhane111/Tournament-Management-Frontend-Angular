@@ -1,0 +1,24 @@
+.container{
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 2%;
+
+}
+.container h1{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 3%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.inner{
+    overflow: hidden;
+
+}
+.inner img {
+    transition: all 1.5s ease;
+
+}
+.inner:hover img{
+    transform: scale(1.5);
+}

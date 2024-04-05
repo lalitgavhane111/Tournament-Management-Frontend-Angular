@@ -1,0 +1,58 @@
+<html>
+<head>
+</head>
+<body  >
+  <div class="banner" onload="slider()" >
+    <div class="slider">
+        <img src="../assets/slider1.jpg" id="slideimg" alt="">
+    </div>
+    <div class="overlay" >
+        <div class="navbar">
+            <div class="logo">
+                <h1>The Soccer Cup</h1>
+            </div>
+            <div class="menu-icons">
+                <ul>
+                  <li><a routerLink="/send-request">Team Request</a></li>            
+                  <li><a routerLink="/requests-status">Request Status</a></li>  
+                  <li><a routerLink="/aboutus">About</a></li>              
+                  <li><button id="logoutBtn" (click)= "Onlogout()">Log Out</button></li>                  
+                </ul>
+            </div> 
+        </div>
+        <div class="content">
+            <h1>The Ultimate Kick</h1>
+            <h3>Step up your game and join the action! Send your team request now to compete in the Tournament</h3>
+            <div>
+                <button type="button" routerLink="/tournaments">View Tournaments</button>
+                <button type="button" routerLink="/teams" class="btn-2">View Teams</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+</body>
+    
+<!--
+  <script>
+    var slideimg= document.getElementById("slideimg");
+    var images = new Array(
+        "../assets/slider1.avif",
+      "../assets/slider2.avif",
+      "../assets/slider3.avif",
+      "../assets/slider4.avif"
+    );
+    var len = images.length;
+    var i = 0;
+
+    function slider(){
+      if(i > len - 1){
+        i = 0;
+      }
+      slideimg.src = images[i];
+      i++;
+      setTimeout(slider, 3000);
+    }
+</script>
+-->
+</html>

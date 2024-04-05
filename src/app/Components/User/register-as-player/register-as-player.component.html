@@ -1,0 +1,31 @@
+
+
+
+<div class="tempContainer">
+    <div class="leftImgContainer">
+        <img src="../assets/register1.jpg" alt="RegisterImage">
+    </div>
+    <div class="rightContainer">
+        <h1>Register as a player</h1>
+        <p>Enter your details carefully and proceed further</p>
+        <form [formGroup]="formPlayerData" class="registerForm">
+            <div class="form-group field">
+              <label for="exampleInputName">Player Name</label>
+              <input type="text" class="form-control" id="exampleInputName" formControlName="name" placeholder="Enter name">
+            </div>
+            <div class="form-group field">
+              <label for="exampleInputdob">Date of Birth</label>
+              <input id="datedob" type="date" class="form-control" id="exampleInputdob" formControlName="dob" placeholder="Date of Birth" max={{currentDate}}>
+            </div>
+            <div class="form-group field">
+                <label for="playerRole">Player Role</label>
+                <select id="playerRole" class="form-select" formControlName="playerRole" aria-label="Select role" #name name="playerRole">
+                  <option selected value="Attacker">Attacker</option>
+                  <option value="Defender">Defender</option>
+                  <option value="Goal Keeper">Goal Keeper</option>
+                </select>
+              </div>
+            <button type="button" class="btn btn-primary" (click)="registerPlayer()">Submit</button>
+          </form>
+    </div>
+</div>

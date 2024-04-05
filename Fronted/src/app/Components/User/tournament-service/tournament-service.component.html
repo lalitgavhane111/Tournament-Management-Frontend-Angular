@@ -1,0 +1,127 @@
+<header class="header" style="width:100%">
+    <h1 class="logo" style="color: #fff; margin-left: -410px; margin-top: 5px;padding-left: 35%; "> The Soccer Cup </h1>
+      <ul class="main-nav">
+          <li><a [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a></li>
+          <li><a [routerLink]="['/send-request']" routerLinkActive="router-link-active" >Team Request</a></li>
+          <li><a [routerLink]="['/requests-status']" routerLinkActive="router-link-active" >Request Status</a></li>
+          <li><a [routerLink]="['/aboutus']" routerLinkActive="router-link-active" >About</a></li>
+          <li><a [routerLink]="['/login']" routerLinkActive="router-link-active" (click)="logout()">Log Out</a></li>
+      </ul>
+  </header> 
+  
+
+<style>
+
+body{
+font-family: sans-serif;
+height: 600px;
+
+}
+.container{
+    width: 100%; 
+
+}
+
+.table-container{
+border-radius: 30%;
+padding: 0 10%;
+margin: 0 auto 0;
+
+}
+.heading{
+font-size: 40px;
+text-align: center;
+margin-top: 30px;
+margin-bottom: 15px;
+}
+.table{
+width: 100%;
+border-collapse: collapse;
+}
+.table thead{
+background-color: #ee2828;
+
+}
+.table thead tr th{
+font-size: 14px;
+font-weight: medium;
+letter-spacing: 0.35px;
+opacity: 1;
+padding: 12px;
+vertical-align: top;
+border:1px solid #524f4f85;
+}
+
+.table tbody tr td{
+font-size: 14px;
+letter-spacing: 0.35px;
+font-weight: normal;
+padding: 8px;
+text-align: center;
+background-color: rgb(252, 246, 237);
+border:1px solid #524f4f85;
+
+}
+.table .text-open{
+font-size: 14px;
+font-weight: bold;
+letter-spacing: 0.35px;
+color: #ff1046;
+
+}
+ .table {
+  text-align: center;
+  margin-left: 0px;
+
+ }   
+ 
+ .heading{
+  font-size: 30px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+ }
+    </style>
+    <body>
+    
+    <div class="container" style="width: 100%">
+    <h1 class="heading" style="text-transform: uppercase;">List of all teams</h1>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"><b>#</b></th>
+            <th scope="col"><b>Team Name</b></th>
+            <th scope="col"><b>Team Rating</b></th>
+            <th scope="col"><b>Players Name</b></th>
+            <th scope="col"><b>Players Rating</b></th>
+            <th scope="col"><b>Players Role</b></th>
+          </tr>
+          <tbody>
+           
+            <tr *ngFor="let data of apiData, let i = index">
+              <td>{{i+1}}</td>
+              <td>{{data.name}}</td>
+              <td>{{data.teamRating}}</td>
+              <td>
+                <ul>
+                  <li *ngFor="let player of data.players" >{{player.name}}</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li *ngFor="let player of data.players" >{{player.playerRating}}</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li *ngFor="let player of data.players" >{{player.playerRole}}</li>
+                </ul>
+              </td>
+             
+            </tr>
+            
+          </tbody>
+      </table>
+      </div>
+    </body>
+<app-footer></app-footer>

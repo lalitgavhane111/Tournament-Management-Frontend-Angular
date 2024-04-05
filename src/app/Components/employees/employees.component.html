@@ -1,0 +1,162 @@
+<!--
+<html>
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">EMS Portal</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#AddEmployee" type="submit" >Add Employee</button>
+    </div>
+  </div>
+</nav>
+
+
+ Modal 
+<div class="modal fade" id="AddEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Capgemini Employees</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">ID</label>
+            <input type="text" class="form-control" id="number" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Enter unique Id please.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Pleae,Enter the correct name.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Salary</label>
+            <input type="email" class="form-control" id="salary" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Enter Salary.</div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Commission</label>
+            <input type="email" class="form-control" id="commission" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Enter you commission.</div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Date of Joining</label>
+            <input type="email" class="form-control" id="dateofJoining" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">What's your Date Of Joining.</div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Date Of Birth</label>
+            <input type="email" class="form-control" id="dob" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">What's your Date Of Birth.</div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Department Number</label>
+            <input type="email" class="form-control" id="departementno" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Enter Department number.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Job Title</label>
+            <input type="email" class="form-control" id="jobtitle" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">What's your Job Title.</div>
+          </div>
+          
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Add Employee</button>
+          </div>
+        </form> 
+      </div>
+     
+    </div>
+  </div>
+</div>
+</div>
+</html>
+-->
+<!--<div class="container">
+    <div class="row flip-boxes">
+      <div class="col-md-3 col-sm-4 col-8 flip-box">
+        <div class="front" style="background-image: url('https://media.istockphoto.com/id/471780289/photo/side-volley-kick.jpg?s=612x612&w=0&k=20&c=wx2ltKJeA-00btc12S4VCPumZcY1Qg8P0WAW3GgVBRM=');">
+          <div class="content text-center text-sm">
+            <div class="content text-sm" *ngFor="let list of tourList">
+                
+                <ng-container *ngIf="list.id === 700">
+                    <h2>Team: {{list.name}}</h2>
+                  <p>Start Date:{{list.startDate|date}}</p>
+                  <p>End Date:{{list.endDate |date}}</p>
+                  <p>Winner Team:{{list.winnerTeam ?list.winnerTeam:'TBD'}}</p>
+                  
+            
+                </ng-container>
+              </div>
+            </div>
+           
+            
+        </div>
+            <span class="click-for-more">
+            </span>
+          </div>
+        </div>
+        <div class="back">
+          <div class="content text-center">
+            <div class="content text-sm" *ngFor="let match of tourMatch ">
+                
+                <ng-container *ngIf="match.id === 900">
+                    <h2>Tournament Id: {{match.tournamentId}}</h2>
+                  <p>Home Team Id : {{match.homeTeamId}}</p>
+                                <h1>Vs</h1>
+                  <p>Away Team Id : {{match.awayTeamId}}</p>
+                  <p>Winner Team:{{match.matchWinner ?match.matchWinner:'TBD'}}</p>
+                  
+            
+                </ng-container>
+           
+            
+               
+             
+        </div>
+                  
+       
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 col-6 flip-box">
+        <div class="front" style="background-image: url('https://media.istockphoto.com/id/541126572/photo/football-player-in-action-jumping-for-head-kick-isolated-sky.jpg?s=612x612&w=0&k=20&c=Aon8C6xEpE5Ge8Zp5-hNEZgBMZsr_adKLl0X4lnWwaY=');">
+          <div class="content" >
+            Second
+          </div>
+        </div>
+        <div class="back">
+          <div class="content">
+            Second Back
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 col-6 flip-box">
+        <div class="front" style="background-image: url('https://media.istockphoto.com/id/187048730/photo/young-men-playing-football.jpg?s=612x612&w=0&k=20&c=TE6LRfAjvCK_IKE-a8b_2kdQun0dtAzuhGaWIesJeN8=');">
+          <div class="content-text-sm">
+            Third
+          </div>
+        </div>
+        <div class="back">
+          <div class="content">
+            Third Back
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->

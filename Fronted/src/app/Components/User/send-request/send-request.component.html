@@ -1,0 +1,36 @@
+<header class="header" style="width:100%">
+  <h1 class="logo" style="color: #fff; margin-left: -410px; margin-top: 5px;padding-left: 35%; "> The Soccer Cup </h1>
+    <ul class="main-nav">
+        <li><a [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a></li>
+        <li><a [routerLink]="['/requests-status']" routerLinkActive="router-link-active" >Request Status</a></li>
+        <li><a [routerLink]="['/aboutus']" routerLinkActive="router-link-active" >About</a></li>
+        <li><a [routerLink]="['/login']" routerLinkActive="router-link-active" (click)="logout()">Log Out</a></li>
+    </ul>
+</header> 
+
+
+
+<div class="tempContainer" style="margin-left: 200px; text-align: center;">
+    <h1 style="margin-left: -65px;">Teams</h1>
+    <p style="margin-left: -30px;">You can make a request in any of the below teams</p>
+    <table class="table table-bordered temptable">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Team Rating</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let team of allTeamsData, let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{team.name}}</td>
+            <td>{{team.teamRating}}</td>
+            <td><button type="button" class="btn btn-primary" (click)="requestToTeam(team.id)">Send Request</button></td>
+          </tr>   
+        </tbody>
+    </table>
+</div>
+
+<app-footer></app-footer>

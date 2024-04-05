@@ -1,0 +1,23 @@
+<div class="componentContainer">
+    <h1>Teams List</h1>
+    <p>Below is the list of teams. You can edit or click on any team name to nagivate further</p>
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Team Rating</th>
+            <th scope="col" colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let team of teamsData, let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td><a class="temp" routerLink="/admin-dashboard/view-teams/{{team.id}}/view-players">{{team.name}}</a></td>
+            <td>{{team.teamRating}}</td>
+            <td><button type="button" class="btn btn-primary editButton" routerLink="/admin-dashboard/view-teams/{{team.id}}/edit">Edit</button></td>
+            <td><button type="button" class="btn btn-warning deleteButton" (click)="delete(team.id)">Delete</button></td>
+          </tr> 
+        </tbody>
+      </table>
+</div>

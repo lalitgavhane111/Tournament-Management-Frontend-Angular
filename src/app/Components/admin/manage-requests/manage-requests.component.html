@@ -1,0 +1,34 @@
+<div class="componentContainer">
+    <h1>Manage team requests</h1>
+    <p>Manage the requests made by players to particular teams</p>
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Player Name</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Role</th>
+            <th scope="col">Team Request</th>
+            <th scope="col">Status</th>
+            <th scope="col" colspan="3">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let teamRequest of teamRequests, let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{teamRequest.player.name}}</td>
+            <td>{{teamRequest.player.playerRating}}</td>
+            <td>{{teamRequest.player.playerRole}}</td>
+            <td>{{teamRequest.team.name}}</td>
+            <td>
+              <span *ngIf="teamRequest.status==true">Accepted</span>
+              <span *ngIf="teamRequest.status==false">Rejected</span>
+              <span *ngIf="teamRequest.status==null">Pending</span>
+            </td>
+            <td><button *ngIf="teamRequest.status==null" type="button" class="btn btn-primary acceptButton" (click)="acceptRequest(teamRequest.id, teamRequest.playerId, teamRequest.teamId)">Accept</button></td>
+            <td><button *ngIf="teamRequest.status==null" type="button" class="btn btn-primary rejectButton" (click)="rejectRequest(teamRequest.id, teamRequest.playerId, teamRequest.teamId)">Reject</button></td>
+            <td><button type="button" class="btn btn-warning deleteButton" (click)="deleteRequest(teamRequest.id)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,47 @@
+<div class="container">
+  <h1>Top Tournaments</h1>
+  <div class="row justify-content-center">
+      <div class="col-md-4">
+          <div class="card shadow" style="width: 18rem;">
+              <div class="inner">
+                  <img src="../assets/istockphoto.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body text-center">
+                  <h5 class="card-title text-sm"><b>{{tourList[0].name}}</b></h5>
+                  <p class="card-text text-sm">Start Date: {{tourList[0].startDate |date}}</p>
+                  <p class="card-text text-sm">End Date: {{tourList[0].endDate|date}}</p>
+                  <p class="card-text text-sm">Winner Team: {{tourList[0].winnerTeam}}</p>
+                  <a routerLink="/tournaments/700/matches" class="btn btn-outline-success">More Details</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card shadow" style="width: 18rem;">
+              <div class="inner">
+                  <img src="../assets/photo.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body text-center">
+                  <h5 class="card-title"><b>{{tourList[1].name}}</b></h5>
+                  <p class="card-text">Start Date: {{tourList[1].startDate |date}}</p>
+                  <p class="card-text">End Date: {{tourList[1].endDate|date}}</p>
+                  <p class="card-text">Winner Team: {{tourList[1].winnerTeam ? tourList[1].winnerTeam : 'TBD'}}</p>
+                  <a routerLink="/tournaments/701/matches" class="btn btn-outline-success">More Details</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card shadow" style="width: 18rem;">
+              <div class="inner">
+                  <img src="../assets/footnew2.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body text-center">
+                  <h5 class="card-title text-sm"><b>{{tourList[2].name}}</b></h5>
+                  <p class="card-text text-sm">Start Date: {{tourList[2].startDate |date}}</p>
+                  <p class="card-text text-sm">End Date: {{tourList[2].endDate | date}}</p>
+                  <p class="card-text text-sm">Winner Team: {{tourList[2].winnerTeam ? tourList[2].winnerTeam : 'TBD'}}</p>
+                  <a routerLink="/tournaments/702/matches" class="btn btn-outline-success">More Details</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

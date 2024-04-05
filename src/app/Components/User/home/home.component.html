@@ -1,0 +1,34 @@
+<!--
+<div class="tournament-list">
+<div class="tournament-card" *ngFor="let tournament of tourList">
+    <div class="tournament-info">
+        <h3>{{tournament.name}}</h3>
+        <p>Start Date: {{tournament.startDate | date}} </p>
+        <p>End Date : {{tournament.endDate | date }}</p>
+        <p>Winner : {{tournament.winnerTeam ? tournament.winnerTeam : 'TBD' }}</p>
+    </div>
+    <div class="tournament-details">
+        <h4>Matches</h4>
+        <ul>
+            <li *ngFor="let match of tournament.matches">
+                {{match.homeTeam}} vs {{match.awayTeam}} - {{match.result}}
+
+            </li>
+        
+        </ul>
+        <h4>Tournament Details</h4>
+        <ul>
+         <li *ngFor="let detail of tournament.tournamentDetails">
+         {{detail}}
+        </li>
+        </ul>
+       
+    </div>
+
+</div>
+</div>
+-->
+
+
+<app-login> </app-login>
+<router-outlet> </router-outlet>
